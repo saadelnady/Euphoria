@@ -212,6 +212,10 @@ tbody tr .quantity-buttons {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+tbody .quantity-buttons .quantity {
+  font-size: 30px;
+  color: #807d7e;
+}
 tbody tr .quantity-buttons button {
   border: none;
   cursor: pointer;
@@ -270,6 +274,49 @@ table tbody tr .total {
 }
 table tbody tr .delete {
   cursor: pointer;
+}
+.scrollTotop {
+  position: fixed;
+  right: 30px;
+  bottom: 8px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  padding: 5px;
+  display: none;
+}
+
+.scrollTotop:hover {
+  color: #fff;
+  background-color: crimson;
+}
+.grandTotal {
+  width: 30%;
+  margin: auto;
+  font-size: 30px;
+}
+.sadCart {
+  width: 80%;
+  margin-top: 100px auto;
+  text-align: center;
+}
+.grandTotal .total {
+  font-size: 35px;
+  font-weight: bold;
+  color: #807d7e;
 }
 .footer {
   padding: 30px 20px 0;

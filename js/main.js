@@ -57,7 +57,7 @@ buttons.forEach((button, index) => {
 });
 
 // products
-let productsDiv = document.querySelector(".products .cards");
+let cardsContainer = document.querySelector(".products .cards");
 let productsButtons = document.querySelectorAll(".products > button");
 
 function getData() {
@@ -66,7 +66,7 @@ function getData() {
       removeActivationFromButtons();
       this.classList.add("active");
 
-      productsDiv.innerHTML = "";
+      cardsContainer.innerHTML = "";
 
       if (this.id === "men") {
         getMenData();
@@ -106,7 +106,7 @@ function getMenData() {
         </div>
    </div>
 `;
-    productsDiv.innerHTML += card;
+    cardsContainer.innerHTML += card;
   });
 }
 
@@ -131,7 +131,7 @@ function getWomenData() {
         </div>
        </div>
         `;
-    productsDiv.innerHTML += card;
+    cardsContainer.innerHTML += card;
   });
 }
 
@@ -152,7 +152,7 @@ function getAllData() {
         </div>
        </div>
         `;
-    productsDiv.innerHTML += card;
+    cardsContainer.innerHTML += card;
   });
 }
 
@@ -160,3 +160,52 @@ function showDetails(id) {
   localStorage.setItem("productId", id);
   console.log(id);
 }
+
+// Get references to HTML elements
+const searchInput = document.getElementById("searchInput");
+
+// Function to perform search and display matching products
+function performSearch() {
+  const searchText = searchInput.value;
+  const filteredProducts = products.filter((product) =>
+    product.name.includes(searchText)
+  );
+
+  // Clear previous products
+  cardsContainer.innerHTML = "";
+
+  // Display search results
+  filteredProducts.forEach((product) => {
+    let card = `
+    <div class="card">
+        <img src="${product.img_src}" alt="" />
+        <div class="text">
+          <p>${product.name}</p>
+          <a href="./product.html" class="productInfo" onclick ="showDetails(${product.id})">Explore Now!</a>
+          <img src="./images/ic_blackarrowright.png" alt="" />
+        </div>
+       </div>
+        `;
+    cardsContainer.innerHTML += card;
+  });
+}
+
+// Attach event listener to the search input
+searchInput.addEventListener("input", performSearch);
+// ========================================================
+
+// scroll to top button
+
+// btn scroll to top
+let btnScrollTotop = document.getElementsByClassName("scrollTotop")[0];
+
+onscroll = () => {
+  if (scrollY >= 200) {
+    btnScrollTotop.style.display = "block";
+  } else {
+    btnScrollTotop.style.display = "none";
+  }
+};
+btnScrollTotop.onclick = () => {
+  scroll({ top: 0, behavior: "smooth" });
+};

@@ -310,12 +310,46 @@ a {
 .product-container .product-info .buttons .addToCart i {
   margin-right: 10px;
 }
-.product-container .product-info .buttons .salary {
+.product-container .product-info .buttons .price {
   display: inline-block;
   border: 1px solid #3c4242;
   padding: 10px 25px;
   font-size: 20px;
   border-radius: 6px;
+  position: relative;
+}
+.product-container .product-info .buttons .price::before {
+  position: absolute;
+  content: "$";
+  right: 10px;
+}
+.scrollTotop {
+  position: fixed;
+  right: 30px;
+  bottom: 8px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  padding: 5px;
+  display: none;
+}
+
+.scrollTotop:hover {
+  color: #fff;
+  background-color: crimson;
 }
 .product-container .product-info .payments {
   margin-top: 30px;

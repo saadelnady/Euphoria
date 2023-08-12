@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="./css/mycart.css" />
   </head>
   <body>
+    <div class="scrollTotop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <div class="hero">
       <header>
         <a href="./index.html"> <img src="./images/Logo.png" alt="" /></a>
@@ -50,32 +53,11 @@
             <th>action</th>
           </tr>
         </thead>
-        <tbody id="tableBody">
-          <tr>
-            <td class="product-details">
-              <img src="./images/11.png" alt="" />
-              <div class="details">
-                <h3 class="title">Blue Flower Print Crop Top</h3>
-                <p class="color">Color : Yellow</p>
-                <p class="size">Size : M</p>
-              </div>
-            </td>
-            <td class="price">$29.00</td>
-            <td>
-              <div class="quantity-buttons">
-                <button class="minus">-</button>
-                <span class="amount">1</span>
-                <button class="plus">+</button>
-              </div>
-            </td>
-            <td class="shipping">free</td>
-            <td class="total">$ 29.00</td>
-            <td>
-              <img src="./images/ic_recyclepin.png" alt="" class="delete" />
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="tableBody"></tbody>
       </table>
+    </div>
+    <div class="grandTotal">
+      your Grand total is <span class="total"></span> $
     </div>
     <div class="footer">
       <div class="our-links">
@@ -143,6 +125,8 @@
         Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
       </p>
     </div>
+    <script src="./js/data.js"></script>
+
     <script src="./js/mycart.js"></script>
   </body>
 </html>

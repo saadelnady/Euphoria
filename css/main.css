@@ -13,6 +13,34 @@ li {
 a {
   text-decoration: none;
 }
+.scrollTotop {
+  position: fixed;
+  right: 30px;
+  bottom: 8px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  padding: 5px;
+  display: none;
+}
+
+.scrollTotop:hover {
+  color: #fff;
+  background-color: crimson;
+}
 
 .specialArticle {
   position: relative;
