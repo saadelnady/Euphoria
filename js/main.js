@@ -11,7 +11,7 @@ const landingDiv = document.querySelector(".landing");
 const nextBtn = document.getElementById("nextBtn");
 const previousBtn = document.getElementById("previousBtn");
 const buttons = document.querySelectorAll(".hero .landing .bullets span");
-let i = 2;
+let i = 0;
 function nextSlide() {
   checker();
   landingDiv.style.backgroundImage = `url(./images/bg_landing_${i}.jpg)`;
