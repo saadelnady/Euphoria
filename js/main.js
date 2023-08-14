@@ -14,14 +14,14 @@ const buttons = document.querySelectorAll(".hero .landing .bullets span");
 let i = 2;
 function nextSlide() {
   checker();
-  landingDiv.style.backgroundImage = `url(../images/bg_landing_${i}.jpg)`;
+  landingDiv.style.backgroundImage = `url(./images/bg_landing_${i}.jpg)`;
   updateActiveBullet();
   i++;
 }
 
 function previouseSlide() {
   checker();
-  landingDiv.style.backgroundImage = `url(../images/bg_landing_${i}.jpg)`;
+  landingDiv.style.backgroundImage = `url(./images/bg_landing_${i}.jpg)`;
   updateActiveBullet();
   i--;
 }
@@ -38,13 +38,6 @@ setInterval(nextSlide, 4000);
 nextBtn.onclick = nextSlide;
 previousBtn.onclick = previouseSlide;
 
-function updateActiveBullet() {
-  buttons.forEach((button) => {
-    button.classList.remove("active");
-  });
-  buttons[i - 1].classList.add("active");
-}
-
 buttons.forEach((button, index) => {
   button.onclick = function () {
     buttons.forEach((button) => {
@@ -52,7 +45,7 @@ buttons.forEach((button, index) => {
     });
     button.classList.add("active");
     i = index + 1; // Update the index based on the clicked bullet
-    landingDiv.style.backgroundImage = `url(../images/bg_landing_${i}.jpg)`;
+    landingDiv.style.backgroundImage = `url(./images/bg_landing_${i}.jpg)`;
   };
 });
 
