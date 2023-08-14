@@ -310,8 +310,16 @@ table tbody tr .delete {
 }
 .sadCart {
   width: 80%;
-  margin-top: 100px auto;
+  margin: 100px auto;
   text-align: center;
+}
+.sadCart p:first-of-type {
+  margin-top: 50px;
+  font-size: 25px;
+}
+.sadCart p:last-of-type {
+  font-size: 20px;
+  margin-top: 20px;
 }
 .grandTotal .total {
   font-size: 35px;

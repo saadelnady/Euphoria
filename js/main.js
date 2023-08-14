@@ -11,7 +11,7 @@ const landingDiv = document.querySelector(".landing");
 const nextBtn = document.getElementById("nextBtn");
 const previousBtn = document.getElementById("previousBtn");
 const buttons = document.querySelectorAll(".hero .landing .bullets span");
-let i = 0;
+let i = 1;
 function nextSlide() {
   checker();
   landingDiv.style.backgroundImage = `url(./images/bg_landing_${i}.jpg)`;
@@ -73,6 +73,13 @@ function getData() {
 }
 
 getData();
+
+function updateActiveBullet() {
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  buttons[i - 1].classList.add("active");
+}
 
 function removeActivationFromButtons() {
   productsButtons.forEach((button) => {

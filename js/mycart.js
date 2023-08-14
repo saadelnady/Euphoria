@@ -7,26 +7,25 @@ burgerIcon.onclick = function () {
 
 // ========================================================================
 const myCart = JSON.parse(localStorage.getItem("myCart"));
+
 if (myCart == null) {
   let table = document.getElementsByTagName("table")[0];
   let emptyCart = `
-                  <div class="sadCart">
-                          <img src="../images/bg_sadCart.png" alt="" />
-                          <p>Your cart is empty and sad :(</p>
-                          <p>Add something to make it happy!</p>
-                </div>
-      
+                <div class="sadCart">
+                        <img src="../images/bg_sadCart.png" alt="" />
+                        <p>Your cart is empty and sad :(</p>
+                        <p>Add something to make it happy!</p>
+              </div>
+    
 `;
   table.innerHTML = emptyCart;
   let total = document.querySelector(".grandTotal");
   total.innerHTML = "";
-} else {
-  displayTable();
 }
-
 function displayTable() {
   let tBody = document.getElementById("tableBody");
   tBody.innerHTML = "";
+
   myCart.forEach((productInCart, index) => {
     let tr;
     tr = `
