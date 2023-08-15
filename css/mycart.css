@@ -120,6 +120,14 @@ a {
   color: #fff;
   background-color: #3c4242;
 }
+.hero header .buttons i.active {
+  color: #fff;
+  background-color: #3c4242;
+}
+.hero header .links a.active {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .hero header .header-content {
   display: flex;
   justify-content: space-between;
@@ -229,6 +237,10 @@ tbody tr .quantity-buttons button {
 }
 tbody tr .quantity-buttons button:hover {
   color: #ccc;
+}
+.hero header .buttons i.active {
+  color: #fff;
+  background-color: #3c4242;
 }
 table tbody .product-details {
   display: flex;

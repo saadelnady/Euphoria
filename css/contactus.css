@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: Core Sans C;
 }
-body{
+body {
   scroll-behavior: smooth;
 }
 li {
@@ -99,6 +99,7 @@ a {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 .hero header .search {
   display: flex;
   align-items: center;
@@ -131,6 +132,7 @@ a {
   position: absolute;
   left: 10px;
 }
+
 .hero header .buttons i {
   padding: 10px;
   margin-right: 10px;
@@ -144,6 +146,10 @@ a {
   -o-transition: 0.5s;
 }
 .hero header .buttons i:hover {
+  color: #fff;
+  background-color: #3c4242;
+}
+.hero header .buttons i.active {
   color: #fff;
   background-color: #3c4242;
 }
@@ -220,6 +226,22 @@ a {
   align-items: center;
   margin: 50px 0 0 50px;
 }
+#errorMessage {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  background-color: #eee;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  display: none;
+}
+
 .container form input,
 .container form textarea {
   padding: 15px 20px;

@@ -72,6 +72,7 @@ a {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 .hero header .search {
   display: flex;
   align-items: center;
@@ -117,6 +118,10 @@ a {
   -o-transition: 0.5s;
 }
 .hero header .buttons i:hover {
+  color: #fff;
+  background-color: #3c4242;
+}
+.hero header .buttons i.active {
   color: #fff;
   background-color: #3c4242;
 }

@@ -158,7 +158,6 @@ function getAllData() {
 
 function showDetails(id) {
   localStorage.setItem("productId", id);
-  console.log(id);
 }
 
 // Get references to HTML elements

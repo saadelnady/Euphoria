@@ -7,8 +7,7 @@ burgerIcon.onclick = function () {
 
 // ========================================================================
 const myCart = JSON.parse(localStorage.getItem("myCart"));
-
-if (myCart == null) {
+if (myCart == null || localStorage.length === 0) {
   let table = document.getElementsByTagName("table")[0];
   let emptyCart = `
                 <div class="sadCart">
@@ -99,8 +98,7 @@ updateGrandTotal();
 
 function deleteProductInMyCart(index) {
   myCart.splice(index, 1);
-  console.log(myCart);
-  localStorage.setItem("myCart", JSON.stringify(myCart));
+   localStorage.setItem("myCart", JSON.stringify(myCart));
   displayTable();
   updateGrandTotal();
 }
