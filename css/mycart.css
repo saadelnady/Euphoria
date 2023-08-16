@@ -289,11 +289,12 @@ table tbody tr .delete {
 }
 .scrollTotop {
   position: fixed;
-  right: 30px;
-  bottom: 8px;
+  right: 100px;
+  bottom: 70px;
   font-size: 20px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  color: #000;
+  height: 40px;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #eee;
@@ -307,7 +308,7 @@ table tbody tr .delete {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  padding: 5px;
+  padding: 10px;
   display: none;
 }
 

@@ -7,16 +7,17 @@ burgerIcon.onclick = function () {
 
 // ========================================================================
 const myCart = JSON.parse(localStorage.getItem("myCart"));
-if (myCart == null || localStorage.length === 0) {
+
+function emptyCart() {
   let table = document.getElementsByTagName("table")[0];
   let emptyCart = `
-                <div class="sadCart">
-                        <img src="../images/bg_sadCart.png" alt="" />
-                        <p>Your cart is empty and sad :(</p>
-                        <p>Add something to make it happy!</p>
-              </div>
-    
-`;
+                  <div class="sadCart">
+                          <img src="../images/bg_sadCart.png" alt="" />
+                          <p>Your cart is empty and sad :(</p>
+                          <p>Add something to make it happy!</p>
+                </div>
+      
+  `;
   table.innerHTML = emptyCart;
   let total = document.querySelector(".grandTotal");
   total.innerHTML = "";
@@ -24,6 +25,10 @@ if (myCart == null || localStorage.length === 0) {
 function displayTable() {
   let tBody = document.getElementById("tableBody");
   tBody.innerHTML = "";
+
+  if (!myCart) {
+    emptyCart();
+  }
 
   myCart.forEach((productInCart, index) => {
     let tr;
@@ -85,6 +90,9 @@ displayTable();
 function updateGrandTotal() {
   let grandTotal = document.querySelector(".grandTotal .total");
   grandTotal.innerHTML = getGrandTotal();
+  if (!getGrandTotal()) {
+    emptyCart();
+  }
 }
 function getGrandTotal() {
   let total = 0;
@@ -98,7 +106,7 @@ updateGrandTotal();
 
 function deleteProductInMyCart(index) {
   myCart.splice(index, 1);
-   localStorage.setItem("myCart", JSON.stringify(myCart));
+  localStorage.setItem("myCart", JSON.stringify(myCart));
   displayTable();
   updateGrandTotal();
 }
