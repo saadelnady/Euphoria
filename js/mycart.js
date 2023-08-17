@@ -12,7 +12,7 @@ function emptyCart() {
   let table = document.getElementsByTagName("table")[0];
   let emptyCart = `
                   <div class="sadCart">
-                          <img src="../images/bg_sadCart.png" alt="" />
+                          <img src="./images/bg_sadCart.png" alt="" />
                           <p>Your cart is empty and sad :(</p>
                           <p>Add something to make it happy!</p>
                 </div>
