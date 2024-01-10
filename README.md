@@ -1,1 +1,1 @@
- <img src="./images/Euphoria.png" alt="Search TextInput" width="100%" height="" />
+ <img src="Euphoria.png" alt="Search TextInput" width="100%" height="" />
